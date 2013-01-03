@@ -151,7 +151,9 @@ static UIViewController *_presentVC;
 {
 	if(buttonIndex == [actionSheet cancelButtonIndex])
 	{
-		_cancelBlock();
+        if(_cancelBlock) {
+            _cancelBlock();
+        }
 	}
     else
     {
